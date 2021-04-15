@@ -1,0 +1,14 @@
+{
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changlog"
+    }
+  },
+  "lint-staged": {
+    "*": ["prettier --write --ignore-unknown"],
+    "src/**/*.{js,ts,tsx}": ["eslint --cache --fix"]
+  }
+}
